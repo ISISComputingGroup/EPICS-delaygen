@@ -30,9 +30,7 @@ DBD += delaygenSupport.dbd
 
 #=============================================================================
 # Build an IOC application
-ifeq ($(OS_CLASS),Linux)
 PROD_IOC = delaygenApp
-endif
 
 #-----------------------------------------------------------------------------
 # <name>.dbd will be created and installed
@@ -49,9 +47,14 @@ delaygenApp_SRCS_DEFAULT += delaygenMain.cpp
 #-----------------------------------------------------------------------------
 # Include libraries
 delaygenApp_LIBS += delaygen
+delaygenApp_LIBS += stream
 delaygenApp_LIBS += asyn
 delaygenApp_LIBS += calc
-delaygenApp_LIBS += stream
+delaygenApp_LIBS += sscan
+delaygenApp_LIBS += pcre
+ifdef ONCRPC
+PROD_LIBS_WIN32 += oncrpc
+endif
 delaygenApp_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #

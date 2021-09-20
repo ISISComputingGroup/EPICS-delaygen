@@ -18,15 +18,20 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 SUPPORT=/APSshare/epics/synApps_5_8/support
 
 # Modules required for building module
-ASYN=$(SUPPORT)/asyn-4-26
-IP=$(SUPPORT)/ip-2-17
-IPAC=$(SUPPORT)/ipac-2-13
+ASYN=$(SUPPORT)/asyn/master
+IP=$(SUPPORT)/ip/master
+IPAC=$(SUPPORT)/ipac/master
 
 # Modules needed by some devices for records
 ##### Colby needs sseq
-CALC=$(SUPPORT)/calc-3-4-2-1
+CALC=$(SUPPORT)/calc/master
 ##### BNC 505
-STREAM=$(SUPPORT)/stream-2-6a
+STREAM=$(SUPPORT)/StreamDevice/master
+
+### additional libraries for static linking
+PCRE=$(SUPPORT)/pcre/master
+SSCAN=$(SUPPORT)/sscan/master
+ONCRPC=$(SUPPORT)/oncrpc/master
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/APSshare/epics/base-3.14.12.5
@@ -40,3 +45,7 @@ EPICS_BASE=/APSshare/epics/base-3.14.12.5
 -include $(TOP)/../RELEASE.local
 -include $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local
 -include $(TOP)/configure/RELEASE.local
+
+include $(TOP)/../../../ISIS_CONFIG
+-include $(TOP)/../../../ISIS_CONFIG.$(EPICS_HOST_ARCH)
+
