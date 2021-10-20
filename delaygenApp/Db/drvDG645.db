@@ -26,6 +26,7 @@ record(stringin,"$(P)$(R)StatusSI")
     field(DESC, "Status text")
     field(DTYP, "asynOctetRead")
     field(INP,  "@asyn($(PORT)) STATUS")
+    field(FLNK, "$(P)$(R)ERQLAST")
 }
 record(bo,"$(P)$(R)StatusClearBO")
 {
@@ -815,6 +816,7 @@ record(mbbo,"$(P)$(R)AReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) A_REF")
     field(FLNK, "$(P)$(R)AReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)AReferenceFO")
 {
@@ -846,6 +848,7 @@ record(ao,"$(P)$(R)ADelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)ADelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)ADelayWriteAO")
 {
@@ -942,6 +945,7 @@ record(mbbo,"$(P)$(R)BReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) B_REF")
     field(FLNK, "$(P)$(R)BReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)BReferenceFO")
 {
@@ -973,6 +977,7 @@ record(ao,"$(P)$(R)BDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)BDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)BDelayWriteAO")
 {
@@ -1069,6 +1074,7 @@ record(mbbo,"$(P)$(R)CReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) C_REF")
     field(FLNK, "$(P)$(R)CReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)CReferenceFO")
 {
@@ -1100,6 +1106,7 @@ record(ao,"$(P)$(R)CDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)CDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)CDelayWriteAO")
 {
@@ -1196,6 +1203,7 @@ record(mbbo,"$(P)$(R)DReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) D_REF")
     field(FLNK, "$(P)$(R)DReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)DReferenceFO")
 {
@@ -1227,6 +1235,7 @@ record(ao,"$(P)$(R)DDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)DDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)DDelayWriteAO")
 {
@@ -1323,6 +1332,7 @@ record(mbbo,"$(P)$(R)EReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) E_REF")
     field(FLNK, "$(P)$(R)EReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)EReferenceFO")
 {
@@ -1354,6 +1364,7 @@ record(ao,"$(P)$(R)EDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)EDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)EDelayWriteAO")
 {
@@ -1450,6 +1461,7 @@ record(mbbo,"$(P)$(R)FReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) F_REF")
     field(FLNK, "$(P)$(R)FReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)FReferenceFO")
 {
@@ -1481,6 +1493,7 @@ record(ao,"$(P)$(R)FDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)FDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)FDelayWriteAO")
 {
@@ -1799,6 +1812,7 @@ record(ao,"$(P)$(R)T0OutputAmpAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) T0_AMP")
     field(FLNK, "$(P)$(R)T0OutputAmpAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)T0OutputAmpTweakIncCO")
 {
@@ -1844,6 +1858,7 @@ record(ao,"$(P)$(R)T0OutputOffsetAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) T0_OFFSET")
     field(FLNK, "$(P)$(R)T0OutputOffsetAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)T0OutputOffsetTweakIncCO")
 {
@@ -1931,6 +1946,7 @@ record(ao,"$(P)$(R)ABOutputAmpAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) AB_AMP")
     field(FLNK, "$(P)$(R)ABOutputAmpAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)ABOutputAmpTweakIncCO")
 {
@@ -1976,6 +1992,7 @@ record(ao,"$(P)$(R)ABOutputOffsetAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) AB_OFFSET")
     field(FLNK, "$(P)$(R)ABOutputOffsetAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)ABOutputOffsetTweakIncCO")
 {
@@ -2063,6 +2080,7 @@ record(ao,"$(P)$(R)CDOutputAmpAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) CD_AMP")
     field(FLNK, "$(P)$(R)CDOutputAmpAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)CDOutputAmpTweakIncCO")
 {
@@ -2108,6 +2126,7 @@ record(ao,"$(P)$(R)CDOutputOffsetAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) CD_OFFSET")
     field(FLNK, "$(P)$(R)CDOutputOffsetAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)CDOutputOffsetTweakIncCO")
 {
@@ -2195,6 +2214,7 @@ record(ao,"$(P)$(R)EFOutputAmpAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) EF_AMP")
     field(FLNK, "$(P)$(R)EFOutputAmpAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)EFOutputAmpTweakIncCO")
 {
@@ -2240,6 +2260,7 @@ record(ao,"$(P)$(R)EFOutputOffsetAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) EF_OFFSET")
     field(FLNK, "$(P)$(R)EFOutputOffsetAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)EFOutputOffsetTweakIncCO")
 {

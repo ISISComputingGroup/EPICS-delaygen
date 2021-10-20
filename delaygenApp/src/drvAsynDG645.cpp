@@ -368,6 +368,14 @@ static Command commandTable[] =
   {"",         readSink,       cvtSink,        "IFRS 2",       writeCommandOnly,   "TCPIP_RESET",     }, // "LAN reset"},
   {"EMAC?",    readParam,      cvtCopyText,    "",             writeSink,          "MAC_ADDRESS",     }, // "MAC Address"},
 
+  // Delay channel T0 related commands
+  {"DLAY?0",   readParam,      cvtChanRef,     "DLAY 0,%d,%e", writeChannelRef,    "T0_REF",           }, // "Channel T0 ref"},
+  {"DLAY?0",   readParam,      cvtChanDelay,   "DLAY 0,%d,%e", writeChannelDelay,  "T0_DELAY",         }, // "Channel T0 delay"},
+
+  // Delay channel T1 related commands
+  {"DLAY?1",   readParam,      cvtChanRef,     "DLAY 1,%d,%e", writeChannelRef,    "T1_REF",           }, // "Channel T1 ref"},
+  {"DLAY?1",   readParam,      cvtChanDelay,   "DLAY 1,%d,%e", writeChannelDelay,  "T1_DELAY",         }, // "Channel T1 delay"},
+
   // Delay channel A related commands
   {"DLAY?2",   readParam,      cvtChanRef,     "DLAY 2,%d,%e", writeChannelRef,    "A_REF",           }, // "Channel A ref"},
   {"DLAY?2",   readParam,      cvtChanDelay,   "DLAY 2,%d,%e", writeChannelDelay,  "A_DELAY",         }, // "Channel A delay"},
