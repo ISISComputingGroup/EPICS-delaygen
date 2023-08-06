@@ -860,7 +860,9 @@ static asynStatus writeCommandOnly(int which, Port *pport, void* data,
   asynStatus status;
 
   status = writeOnly(pport,commandTable[which].writeCommand);
-  if( ASYN_ERROR( status) || !pport->check_errors )
+
+  // don't send any more commands if going into local mode
+  if( ASYN_ERROR( status) || !pport->check_errors || !strcmp(commandTable[which].tag, "LOCAL") )
     return status;
 
   return checkError(pport);

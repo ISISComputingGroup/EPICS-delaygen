@@ -2,6 +2,7 @@
 record(stringout,"$(P)$(R)Label")
 {
     field(DESC, "Unit Label")
+    info(dgconfig, "VAL")
 }
 record(stringin,"$(P)$(R)IdentSI")
 {
@@ -99,6 +100,7 @@ record(ao,"$(P)$(R)TriggerRateAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) TRIG_RATE")
     field(FLNK, "$(P)$(R)TriggerRateAI")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)TriggerLevelAI")
 {
@@ -118,6 +120,7 @@ record(ao,"$(P)$(R)TriggerLevelAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) TRIG_LEVEL")
     field(FLNK, "$(P)$(R)TriggerLevelAI")
+    info(dgconfig, "VAL")
 }
 record(mbbi,"$(P)$(R)TriggerSourceMI")
 {
@@ -162,6 +165,7 @@ record(mbbo,"$(P)$(R)TriggerSourceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_SOURCE")
     field(FLNK, "$(P)$(R)TriggerSourceMI")
+    info(dgconfig, "VAL")
 }
 record(mbbi,"$(P)$(R)TriggerInhibitMI")
 {
@@ -202,12 +206,14 @@ record(mbbo,"$(P)$(R)TriggerInhibitMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_INHIBIT")
     field(FLNK, "$(P)$(R)TriggerInhibitMI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)TriggerDelayBO")
 {
     field(DESC, "Trigger Delay")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_DELAY")
+    info(dgconfig, "VAL")
 }
 
 record(bi,"$(P)$(R)TriggerAdvancedModeBI")
@@ -228,6 +234,7 @@ record(bo,"$(P)$(R)TriggerAdvancedModeBO")
     field(ONAM, "Enable")
     field(OUT,  "@asyn($(PORT)) TRIG_ADV_MODE")
     field(FLNK, "$(P)$(R)TriggerAdvancedModeBI")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)TriggerHoldoffAI")
 {
@@ -246,6 +253,7 @@ record(ao,"$(P)$(R)TriggerHoldoffAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) TRIG_HOLDOFF")
     field(FLNK, "$(P)$(R)TriggerHoldoffAI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)TriggerPrescaleLI")
 {
@@ -260,6 +268,7 @@ record(longout,"$(P)$(R)TriggerPrescaleLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_PRESCALE")
     field(FLNK, "$(P)$(R)TriggerPrescaleLI")
+    info(dgconfig, "VAL")
 }
 
 record(longin,"$(P)$(R)ABTriggerPrescaleLI")
@@ -275,6 +284,7 @@ record(longout,"$(P)$(R)ABTriggerPrescaleLO")
    field(DTYP, "asynInt32")
    field(OUT,  "@asyn($(PORT)) TRIG_AB_PRESCALE")
    field(FLNK, "$(P)$(R)ABTriggerPrescaleLI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)CDTriggerPrescaleLI")
 {
@@ -289,6 +299,7 @@ record(longout,"$(P)$(R)CDTriggerPrescaleLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_CD_PRESCALE")
     field(FLNK, "$(P)$(R)CDTriggerPrescaleLI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)EFTriggerPrescaleLI")
 {
@@ -303,6 +314,7 @@ record(longout,"$(P)$(R)EFTriggerPrescaleLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_EF_PRESCALE")
     field(FLNK, "$(P)$(R)EFTriggerPrescaleLI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)GHTriggerPrescaleLI")
 {
@@ -317,6 +329,7 @@ record(longout,"$(P)$(R)GHTriggerPrescaleLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_GH_PRESCALE")
     field(FLNK, "$(P)$(R)GHTriggerPrescaleLI")
+    info(dgconfig, "VAL")
 }
 
 record(longin,"$(P)$(R)ABTriggerPhaseLI")
@@ -332,6 +345,7 @@ record(longout,"$(P)$(R)ABTriggerPhaseLO")
    field(DTYP, "asynInt32")
    field(OUT,  "@asyn($(PORT)) TRIG_AB_PHASE")
    field(FLNK, "$(P)$(R)ABTriggerPhaseLI")
+   info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)CDTriggerPhaseLI")
 {
@@ -346,6 +360,7 @@ record(longout,"$(P)$(R)CDTriggerPhaseLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_CD_PHASE")
     field(FLNK, "$(P)$(R)CDTriggerPhaseLI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)EFTriggerPhaseLI")
 {
@@ -360,6 +375,7 @@ record(longout,"$(P)$(R)EFTriggerPhaseLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_EF_PHASE")
     field(FLNK, "$(P)$(R)EFTriggerPhaseLI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)GHTriggerPhaseLI")
 {
@@ -374,6 +390,7 @@ record(longout,"$(P)$(R)GHTriggerPhaseLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) TRIG_GH_PHASE")
     field(FLNK, "$(P)$(R)GHTriggerPhaseLI")
+    info(dgconfig, "VAL")
 }
 
 ## Burst mode related PVs
@@ -395,6 +412,7 @@ record(bo,"$(P)$(R)BurstModeBO")
     field(ONAM, "Enable")
     field(OUT,  "@asyn($(PORT)) BURST_MODE")
     field(FLNK, "$(P)$(R)BurstModeBI")
+    info(dgconfig, "VAL")
 }
 record(longin,"$(P)$(R)BurstCountLI")
 {
@@ -409,6 +427,7 @@ record(longout,"$(P)$(R)BurstCountLO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) BURST_COUNT")
     field(FLNK, "$(P)$(R)BurstCountLI")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)BurstConfigBI")
 {
@@ -428,6 +447,7 @@ record(bo,"$(P)$(R)BurstConfigBO")
     field(ONAM, "1st Cycle")
     field(OUT,  "@asyn($(PORT)) BURST_T0")
     field(FLNK, "$(P)$(R)BurstConfigBI")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)BurstDelayAI")
 {
@@ -446,6 +466,7 @@ record(ao,"$(P)$(R)BurstDelayAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) BURST_DELAY")
     field(FLNK, "$(P)$(R)BurstDelayAI")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)BurstPeriodAI")
 {
@@ -464,6 +485,7 @@ record(ao,"$(P)$(R)BurstPeriodAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) BURST_PERIOD")
     field(FLNK, "$(P)$(R)BurstPeriodAI")
+    info(dgconfig, "VAL")
 }
 
 
@@ -877,6 +899,7 @@ record(ao,"$(P)$(R)ADelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) A_DELAY_STEP")
     field(FLNK, "$(P)$(R)ADelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)ADelayTweakIncBO")
 {
@@ -884,6 +907,7 @@ record(bo,"$(P)$(R)ADelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) A_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)ADelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)ADelayTweakDecBO")
 {
@@ -891,6 +915,7 @@ record(bo,"$(P)$(R)ADelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) A_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)ADelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel B related PVs
@@ -1006,6 +1031,7 @@ record(ao,"$(P)$(R)BDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) B_DELAY_STEP")
     field(FLNK, "$(P)$(R)BDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)BDelayTweakIncBO")
 {
@@ -1013,6 +1039,7 @@ record(bo,"$(P)$(R)BDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) B_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)BDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)BDelayTweakDecBO")
 {
@@ -1020,6 +1047,7 @@ record(bo,"$(P)$(R)BDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) B_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)BDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel C related PVs
@@ -1135,6 +1163,7 @@ record(ao,"$(P)$(R)CDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) C_DELAY_STEP")
     field(FLNK, "$(P)$(R)CDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)CDelayTweakIncBO")
 {
@@ -1142,6 +1171,7 @@ record(bo,"$(P)$(R)CDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) C_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)CDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)CDelayTweakDecBO")
 {
@@ -1149,6 +1179,7 @@ record(bo,"$(P)$(R)CDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) C_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)CDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel D related PVs
@@ -1264,6 +1295,7 @@ record(ao,"$(P)$(R)DDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) D_DELAY_STEP")
     field(FLNK, "$(P)$(R)DDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)DDelayTweakIncBO")
 {
@@ -1271,6 +1303,7 @@ record(bo,"$(P)$(R)DDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) D_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)DDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)DDelayTweakDecBO")
 {
@@ -1278,6 +1311,7 @@ record(bo,"$(P)$(R)DDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) D_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)DDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel E related PVs
@@ -1393,6 +1427,7 @@ record(ao,"$(P)$(R)EDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) E_DELAY_STEP")
     field(FLNK, "$(P)$(R)EDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)EDelayTweakIncBO")
 {
@@ -1400,6 +1435,7 @@ record(bo,"$(P)$(R)EDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) E_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)EDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)EDelayTweakDecBO")
 {
@@ -1407,6 +1443,7 @@ record(bo,"$(P)$(R)EDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) E_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)EDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel F related PVs
@@ -1522,6 +1559,7 @@ record(ao,"$(P)$(R)FDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) F_DELAY_STEP")
     field(FLNK, "$(P)$(R)FDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)FDelayTweakIncBO")
 {
@@ -1529,6 +1567,7 @@ record(bo,"$(P)$(R)FDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) F_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)FDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)FDelayTweakDecBO")
 {
@@ -1536,6 +1575,7 @@ record(bo,"$(P)$(R)FDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) F_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)FDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel G related PVs
@@ -1590,6 +1630,7 @@ record(mbbo,"$(P)$(R)GReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) G_REF")
     field(FLNK, "$(P)$(R)GReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)GReferenceFO")
 {
@@ -1621,6 +1662,7 @@ record(ao,"$(P)$(R)GDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)GDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)GDelayWriteAO")
 {
@@ -1649,6 +1691,7 @@ record(ao,"$(P)$(R)GDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) G_DELAY_STEP")
     field(FLNK, "$(P)$(R)GDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)GDelayTweakIncBO")
 {
@@ -1656,6 +1699,7 @@ record(bo,"$(P)$(R)GDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) G_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)GDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)GDelayTweakDecBO")
 {
@@ -1663,6 +1707,7 @@ record(bo,"$(P)$(R)GDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) G_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)GDelayAI")
+    info(dgconfig, "VAL")
 }
 
 ## Delay channel H related PVs
@@ -1717,6 +1762,7 @@ record(mbbo,"$(P)$(R)HReferenceMO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) H_REF")
     field(FLNK, "$(P)$(R)HReferenceFO")
+    info(dgconfig, "VAL")
 }
 record(fanout,"$(P)$(R)HReferenceFO")
 {
@@ -1748,6 +1794,7 @@ record(ao,"$(P)$(R)HDelayAO")
     field(PREC, "12")
     field(EGU,  "Sec")
     field(OUT,  "$(P)$(R)HDelayWriteAO PP")
+    info(dgconfig, "VAL")
 }
 record(ao,"$(P)$(R)HDelayWriteAO")
 {
@@ -1776,6 +1823,7 @@ record(ao,"$(P)$(R)HDelayTweakAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) H_DELAY_STEP")
     field(FLNK, "$(P)$(R)HDelayTweakAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)HDelayTweakIncBO")
 {
@@ -1783,6 +1831,7 @@ record(bo,"$(P)$(R)HDelayTweakIncBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) H_DELAY_STEP_POS")
     field(FLNK, "$(P)$(R)HDelayAI")
+    info(dgconfig, "VAL")
 }
 record(bo,"$(P)$(R)HDelayTweakDecBO")
 {
@@ -1790,6 +1839,7 @@ record(bo,"$(P)$(R)HDelayTweakDecBO")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT)) H_DELAY_STEP_NEG")
     field(FLNK, "$(P)$(R)HDelayAI")
+    info(dgconfig, "VAL")
 }
 
 
@@ -1839,6 +1889,7 @@ record(ao,"$(P)$(R)T0OutputAmpTweakAO")
     field(DESC, "Output Amplitude Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)T0OutputOffsetAI")
 {
@@ -1885,6 +1936,7 @@ record(ao,"$(P)$(R)T0OutputOffsetTweakAO")
     field(DESC, "Output Offset Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)T0OutputPolarityBI")
 {
@@ -1904,6 +1956,7 @@ record(bo,"$(P)$(R)T0OutputPolarityBO")
     field(ONAM, "POS")
     field(OUT,  "@asyn($(PORT)) T0_POLARITY")
     field(FLNK, "$(P)$(R)T0OutputPolarityBI")
+    info(dgconfig, "VAL")
 }
 record(seq,"$(P)$(R)T0OutputModeTtlSS")
 {
@@ -1973,6 +2026,7 @@ record(ao,"$(P)$(R)ABOutputAmpTweakAO")
     field(DESC, "Output Amplitude Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)ABOutputOffsetAI")
 {
@@ -2019,6 +2073,7 @@ record(ao,"$(P)$(R)ABOutputOffsetTweakAO")
     field(DESC, "Output Offset Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)ABOutputPolarityBI")
 {
@@ -2038,6 +2093,7 @@ record(bo,"$(P)$(R)ABOutputPolarityBO")
     field(ONAM, "POS")
     field(OUT,  "@asyn($(PORT)) AB_POLARITY")
     field(FLNK, "$(P)$(R)ABOutputPolarityBI")
+    info(dgconfig, "VAL")
 }
 record(seq,"$(P)$(R)ABOutputModeTtlSS")
 {
@@ -2107,6 +2163,7 @@ record(ao,"$(P)$(R)CDOutputAmpTweakAO")
     field(DESC, "Output Amplitude Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)CDOutputOffsetAI")
 {
@@ -2153,6 +2210,7 @@ record(ao,"$(P)$(R)CDOutputOffsetTweakAO")
     field(DESC, "Output Offset Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)CDOutputPolarityBI")
 {
@@ -2172,6 +2230,7 @@ record(bo,"$(P)$(R)CDOutputPolarityBO")
     field(ONAM, "POS")
     field(OUT,  "@asyn($(PORT)) CD_POLARITY")
     field(FLNK, "$(P)$(R)CDOutputPolarityBI")
+    info(dgconfig, "VAL")
 }
 record(seq,"$(P)$(R)CDOutputModeTtlSS")
 {
@@ -2241,6 +2300,7 @@ record(ao,"$(P)$(R)EFOutputAmpTweakAO")
     field(DESC, "Output Amplitude Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)EFOutputOffsetAI")
 {
@@ -2287,6 +2347,7 @@ record(ao,"$(P)$(R)EFOutputOffsetTweakAO")
     field(DESC, "Output Offset Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)EFOutputPolarityBI")
 {
@@ -2306,6 +2367,7 @@ record(bo,"$(P)$(R)EFOutputPolarityBO")
     field(ONAM, "POS")
     field(OUT,  "@asyn($(PORT)) EF_POLARITY")
     field(FLNK, "$(P)$(R)EFOutputPolarityBI")
+    info(dgconfig, "VAL")
 }
 record(seq,"$(P)$(R)EFOutputModeTtlSS")
 {
@@ -2348,6 +2410,7 @@ record(ao,"$(P)$(R)GHOutputAmpAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) GH_AMP")
     field(FLNK, "$(P)$(R)GHOutputAmpAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)GHOutputAmpTweakIncCO")
 {
@@ -2374,6 +2437,7 @@ record(ao,"$(P)$(R)GHOutputAmpTweakAO")
     field(DESC, "Output Amplitude Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(ai,"$(P)$(R)GHOutputOffsetAI")
 {
@@ -2393,6 +2457,7 @@ record(ao,"$(P)$(R)GHOutputOffsetAO")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT)) GH_OFFSET")
     field(FLNK, "$(P)$(R)GHOutputOffsetAI")
+    info(dgconfig, "VAL")
 }
 record(calcout,"$(P)$(R)GHOutputOffsetTweakIncCO")
 {
@@ -2419,6 +2484,7 @@ record(ao,"$(P)$(R)GHOutputOffsetTweakAO")
     field(DESC, "Output Offset Tweak")
     field(PREC, "2")
     field(EGU,  "Volt")
+    info(dgconfig, "VAL")
 }
 record(bi,"$(P)$(R)GHOutputPolarityBI")
 {
@@ -2438,6 +2504,7 @@ record(bo,"$(P)$(R)GHOutputPolarityBO")
     field(ONAM, "POS")
     field(OUT,  "@asyn($(PORT)) GH_POLARITY")
     field(FLNK, "$(P)$(R)GHOutputPolarityBI")
+    info(dgconfig, "VAL")
 }
 record(seq,"$(P)$(R)GHOutputModeTtlSS")
 {
